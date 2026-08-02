@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart - ShopEase</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<nav>
+    <h2>🛒 ShopEase</h2>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/logout/">Logout</a></li>
+    </ul>
+</nav>
+
+<div class="login-container">
+    <div class="login-box">
+        <h2>🛒 My Cart</h2>
+
+        <p>Your selected products will appear here.</p>
+
+       <ul>
+    {% for item in cart_items %}
+        <li>{{ item.product }} - ₹{{ item.price }}</li>
+    {% empty %}
+        <li>No products added yet.</li>
+    {% endfor %}
+</ul>
+
+<h3>Total: ₹{{ total }}</h3>
+
+        <a href="/checkout/">
+    <button>Proceed to Checkout</button>
+</a>
+    </div>
+</div>
+
+</body>
+</html>

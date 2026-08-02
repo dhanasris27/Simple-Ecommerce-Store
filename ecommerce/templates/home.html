@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<nav>
+    <h2>🛒 ShopEase</h2>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="/cart/">🛒 Cart</a></li>
+        <li><a href="/logout/">Logout</a></li>
+    </ul>
+</nav>
+
+<section class="search-section">
+    <input type="text" placeholder="🔍 Search Products..." id="searchBox">
+</section>
+
+<section class="hero">
+    <h1>Welcome to ShopEase</h1>
+    <p>Discover the Best Products at the Best Prices</p>
+    <button>Shop Now</button>
+</section>
+
+<section class="products">
+    <h2>🔥 Our Products</h2>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Wireless Headphones</h3>
+            <p>₹2,999</p>
+            <button onclick="window.location.href='/add-to-cart/Wireless%20Headphones/2999/'">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Smart Watch</h3>
+            <p>₹4,499</p>
+            <button onclick="window.location.href='/add-to-cart/Smart%20Watch/4499/'">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Bluetooth Speaker</h3>
+            <p>₹1,499</p>
+            <button onclick="window.location.href='/add-to-cart/Bluetooth%20Speaker/1499/'">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200" alt="">
+            <h3>Gaming Mouse</h3>
+            <p>₹999</p>
+            <button onclick="window.location.href='/add-to-cart/Gaming%20Mouse/999/'">
+                Add to Cart
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<script>
+const searchBox = document.getElementById("searchBox");
+
+searchBox.addEventListener("keyup", function () {
+    const value = this.value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        const name = card.querySelector("h3").textContent.toLowerCase();
+
+        if (name.includes(value)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>

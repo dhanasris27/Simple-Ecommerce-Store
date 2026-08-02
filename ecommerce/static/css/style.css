@@ -1,0 +1,272 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Navbar */
+nav{
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+}
+
+nav h2{
+    font-size:28px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+/* Hero Section */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(45deg,#2563eb,#7c3aed);
+    color:white;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:white;
+    color:#2563eb;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.hero button:hover{
+    background:#facc15;
+    color:black;
+}
+
+/* Products */
+.title{
+    text-align:center;
+    margin:40px 0;
+    font-size:35px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    text-align:center;
+    padding:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.card p{
+    font-size:20px;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+.card button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#1d4ed8;
+}
+/* Products */
+
+.products{
+    padding:60px 40px;
+    background:#f5f7fa;
+    text-align:center;
+}
+
+.products h2{
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.price{
+    color:#2563eb;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.card button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.card button:hover{
+    background:#1d4ed8;
+}
+/* Search Bar */
+
+.search-section{
+    padding:20px;
+    background:#f5f7fa;
+    text-align:center;
+}
+
+.search-section input{
+    width:60%;
+    max-width:500px;
+    padding:15px;
+    border:2px solid #2563eb;
+    border-radius:30px;
+    font-size:18px;
+    outline:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.search-section input:focus{
+    border-color:#1d4ed8;
+}
+/* Login Page */
+
+.login-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+}
+
+.login-box{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    width:350px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.login-box h2{
+    margin-bottom:25px;
+}
+
+.login-box input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.login-box button{
+    width:100%;
+    padding:12px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.login-box button:hover{
+    background:#1d4ed8;
+}
+
+.login-box p{
+    margin-top:15px;
+}
+
+.login-box a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:bold;
+}
